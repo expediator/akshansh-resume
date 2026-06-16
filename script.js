@@ -126,14 +126,13 @@ volBtn.addEventListener('click', ()=>{
 
 tryAutoplay();
 
-// # SECTION: STARTUP BEHAVIOR (auto-open windows, auto-refresh)
+// # SECTION: STARTUP BEHAVIOR (auto-open windows)
 // start button: opens profile as a friendly default
 document.querySelector('.start-btn').addEventListener('click', ()=>openWindow('profile'));
 
-// auto-open profile + github activity on load, auto-refresh every 2 minutes
+// auto-open profile + github activity on load
 openWindow('github');
 openWindow('profile');
-setTimeout(()=>location.reload(), 120000);
 
 // # SECTION: MUSIC LIBRARY (spotify/youtube tabs)
 document.querySelectorAll('.lib-tab').forEach(tab=>{
