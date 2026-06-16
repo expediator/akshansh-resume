@@ -35,6 +35,19 @@ body::after{width:520px;height:520px;background:#7b5cff2e;bottom:-140px;right:-1
 .desktop-icon span{font-size:28px;transition:transform .15s;}
 .desktop-icon:hover,.desktop-icon:focus{background:#ffffff14;outline:1px solid #ffffff22;}
 .desktop-icon:hover span{transform:translateY(-3px) scale(1.08);}
+.desktop-icon{opacity:0;animation:iconIn .35s ease-out forwards;}
+.icons-grid .desktop-icon:nth-child(1){animation-delay:.03s;}
+.icons-grid .desktop-icon:nth-child(2){animation-delay:.08s;}
+.icons-grid .desktop-icon:nth-child(3){animation-delay:.13s;}
+.icons-grid .desktop-icon:nth-child(4){animation-delay:.18s;}
+.icons-grid .desktop-icon:nth-child(5){animation-delay:.23s;}
+.icons-grid .desktop-icon:nth-child(6){animation-delay:.28s;}
+.icons-grid .desktop-icon:nth-child(7){animation-delay:.33s;}
+.icons-grid .desktop-icon:nth-child(8){animation-delay:.38s;}
+.icons-grid .desktop-icon:nth-child(9){animation-delay:.43s;}
+.icons-grid .desktop-icon:nth-child(10){animation-delay:.48s;}
+.icons-grid .desktop-icon:nth-child(11){animation-delay:.53s;}
+@keyframes iconIn{from{opacity:0;transform:translateX(-10px);}to{opacity:1;transform:none;}}
 
 /* floating widgets */
 .widget{
@@ -87,6 +100,11 @@ body::after{width:520px;height:520px;background:#7b5cff2e;bottom:-140px;right:-1
 .content li{margin-bottom:6px;}
 .tags{display:flex;flex-wrap:wrap;gap:8px;}
 .tags span{background:#2a3550;color:#9fc1ff;border:1px solid #3a4a72;border-radius:14px;padding:5px 12px;font-size:12px;}
+.tech-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+.tech-tags span{background:#ffffff0d;color:#9aa0ab;border:1px solid var(--border);border-radius:10px;padding:2px 9px;font-size:10.5px;}
+.gh-img{width:100%;display:block;margin-bottom:12px;border-radius:6px;}
+.gh-label{color:var(--muted);font-size:11px;margin:4px 0 6px;text-transform:uppercase;letter-spacing:.05em;}
+.gh-chart{width:100%;overflow-x:auto;}
 
 /* taskbar */
 .taskbar{
@@ -123,4 +141,21 @@ body::after{width:520px;height:520px;background:#7b5cff2e;bottom:-140px;right:-1
 .autoplay-hint{
   position:fixed;bottom:56px;right:16px;background:var(--panel2);border:1px solid var(--border);color:var(--text);
   padding:8px 12px;border-radius:6px;font-size:12px;z-index:60;box-shadow:0 6px 18px #000a;cursor:pointer;
+}
+
+/* mobile fallback: no dragging, windows go full-screen, icons/widgets stack */
+@media (max-width:768px){
+  html,body{overflow-y:auto;}
+  .desktop{height:auto;min-height:calc(100vh - 48px);overflow:visible;}
+  .icons-grid{position:static;flex-direction:row;flex-wrap:wrap;justify-content:center;width:100%;padding:16px 8px;gap:6px;}
+  .widget{position:static!important;width:92%;max-width:340px;margin:0 auto 12px;}
+  .clock-widget{text-align:left;}
+  .window{position:fixed!important;left:3vw!important;top:6vh!important;width:94vw!important;max-height:82vh;}
+  .window.maximized{top:2vh!important;max-height:96vh;}
+  .titlebar{cursor:default;}
+  .taskbar{overflow-x:auto;}
+  .taskbar-icons{overflow-x:auto;flex-shrink:0;}
+  .taskbar-icons button{flex-shrink:0;}
+  .track-info{display:none;}
+  .start-btn{padding:0 8px;font-size:13px;}
 }

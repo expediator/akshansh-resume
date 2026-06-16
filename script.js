@@ -111,7 +111,8 @@ tryAutoplay();
 // start button: opens profile as a friendly default
 document.querySelector('.start-btn').addEventListener('click', ()=>openWindow('profile'));
 
-// auto-open profile on load, auto-refresh every 2 minutes
+// auto-open profile + github activity on load, auto-refresh every 2 minutes
+openWindow('github');
 openWindow('profile');
 setTimeout(()=>location.reload(), 120000);
 

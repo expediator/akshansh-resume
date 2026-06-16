@@ -3,7 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akshansh Yadav — Resume</title>
+<title>Akshansh Yadav — Interactive Resume</title>
+<meta name="description" content="Akshansh Yadav — B.Tech Civil Engineering student exploring Web3, Rust, Solidity, Solana & DevOps. Interactive Windows-style resume.">
+<meta name="theme-color" content="#0e1116">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta property="og:title" content="Akshansh Yadav — Interactive Resume">
+<meta property="og:description" content="B.Tech student exploring Web3, Rust, Solidity, Solana & DevOps. Click around — it's a desktop.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://expediator.github.io/akshansh-resume/">
+<meta property="og:image" content="https://expediator.github.io/akshansh-resume/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Akshansh Yadav — Interactive Resume">
+<meta name="twitter:description" content="B.Tech student exploring Web3, Rust, Solidity, Solana & DevOps.">
+<meta name="twitter:image" content="https://expediator.github.io/akshansh-resume/assets/og-image.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,6 +43,7 @@
   <!-- desktop icons -->
   <div class="icons-grid">
     <button class="desktop-icon" data-win="profile"><span>👤</span>Profile</button>
+    <button class="desktop-icon" data-win="github"><span>📊</span>GitHub</button>
     <button class="desktop-icon" data-win="education"><span>🎓</span>Education</button>
     <button class="desktop-icon" data-win="skills"><span>💻</span>Skills</button>
     <button class="desktop-icon" data-win="projects"><span>🧩</span>Projects</button>
@@ -52,6 +65,19 @@
       <p class="role">B.Tech Civil Engineering · Harcourt Butler Technical University, Kanpur</p>
       <p>First-year B.Tech student and JEE Advanced qualifier with a strong foundation in computer vision, embedded systems and quantitative problem solving. Demonstrated ability to lead cross-functional teams and deliver technical projects end-to-end. Now expanding into Web3 and decentralized application development alongside core engineering.</p>
       <p class="contact-line">✉️ 250102005@gmail.com &nbsp;·&nbsp; 🔗 <a href="https://linkedin.com/in/akshansh-yadav-554926304" target="_blank">linkedin.com/in/akshansh-yadav-554926304</a></p>
+    </div>
+  </div>
+
+  <div class="window" id="win-github" data-win="github" style="left:8%;top:46%;width:440px;">
+    <div class="titlebar"><span class="title">📊 GitHub Activity</span>
+      <div class="controls"><button class="min">&#8211;</button><button class="max">&#9633;</button><button class="close">&#10005;</button></div>
+    </div>
+    <div class="content">
+      <p class="role">github.com/<a href="https://github.com/expediator" target="_blank">expediator</a></p>
+      <img class="gh-img" src="https://github-readme-stats.vercel.app/api?username=expediator&show_icons=true&theme=transparent&hide_border=true&title_color=7fc4ff&icon_color=3b9eff&text_color=c7cad1" alt="GitHub stats" loading="lazy" onerror="this.style.display='none'">
+      <img class="gh-img" src="https://github-readme-streak-stats.herokuapp.com/?user=expediator&theme=transparent&hide_border=true&ring=3b9eff&fire=bfa3ff&currStreakLabel=7fc4ff" alt="GitHub streak stats" loading="lazy" onerror="this.style.display='none'">
+      <p class="gh-label">Contribution graph</p>
+      <img class="gh-img gh-chart" src="https://ghchart.rshah.org/3b9eff/expediator" alt="GitHub contribution chart" loading="lazy" onerror="this.style.display='none'">
     </div>
   </div>
 
@@ -85,11 +111,14 @@
     </div>
     <div class="content">
       <div class="entry"><b>Hand Gesture & Voice Controlled RC Car</b><span>Personal · 2025</span>
-        <p>Led development of an Arduino-based RC car with real-time gesture recognition (OpenCV + MediaPipe) and voice control — fully functional prototype in a 4-week timeline. Designed full circuit architecture: sensors, motor driver interfacing, power management.</p></div>
+        <p>Led development of an Arduino-based RC car with real-time gesture recognition (OpenCV + MediaPipe) and voice control — fully functional prototype in a 4-week timeline. Designed full circuit architecture: sensors, motor driver interfacing, power management.</p>
+        <div class="tech-tags"><span>Arduino</span><span>OpenCV</span><span>MediaPipe</span><span>Embedded C</span></div></div>
       <div class="entry"><b>RC Plane Development</b><span>Team · 2025</span>
-        <p>Collaborated on design, assembly and flight testing of a remote-controlled aircraft using lightweight structural materials and aerodynamic configuration systems.</p></div>
+        <p>Collaborated on design, assembly and flight testing of a remote-controlled aircraft using lightweight structural materials and aerodynamic configuration systems.</p>
+        <div class="tech-tags"><span>Aerodynamics</span><span>Prototyping</span><span>Team Build</span></div></div>
       <div class="entry"><b>AI Face Rating & Analysis Application</b><span>Personal · 2026</span>
-        <p>Computer vision app (OpenCV + MediaPipe) for facial feature analysis — symmetry scoring and proportional assessment, with a real-time Tkinter UI.</p></div>
+        <p>Computer vision app (OpenCV + MediaPipe) for facial feature analysis — symmetry scoring and proportional assessment, with a real-time Tkinter UI.</p>
+        <div class="tech-tags"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>Tkinter</span></div></div>
     </div>
   </div>
 
@@ -176,6 +205,7 @@
   <button class="start-btn">⊞ Start</button>
   <div class="taskbar-icons">
     <button data-win="profile" title="Profile">👤</button>
+    <button data-win="github" title="GitHub Activity">📊</button>
     <button data-win="education" title="Education">🎓</button>
     <button data-win="skills" title="Skills">💻</button>
     <button data-win="projects" title="Projects">🧩</button>
