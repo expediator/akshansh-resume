@@ -208,3 +208,15 @@ document.querySelectorAll('.wp-tab').forEach(tab=>{
   });
 });
 setWallpaper(0);
+
+// keep the visit-counter badge pinned just below the status widget, edge-aligned
+function positionVisitCounter(){
+  const widget = document.querySelector('.status-widget');
+  const counter = document.querySelector('.visit-counter');
+  if(!widget || !counter || window.innerWidth <= 768) return;
+  const rect = widget.getBoundingClientRect();
+  counter.style.top = (rect.bottom + 12) + 'px';
+  counter.style.right = (window.innerWidth - rect.right) + 'px';
+}
+positionVisitCounter();
+window.addEventListener('resize', positionVisitCounter);

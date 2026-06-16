@@ -31,7 +31,7 @@ body::after{width:520px;height:520px;background:#7b5cff2e;bottom:-140px;right:-1
 .wp-tab:hover{opacity:1;transform:translateY(-1px);}
 .wp-tab.active{opacity:1;background:#ffffff1a;box-shadow:0 0 0 1px var(--accent);}
 .visit-counter{
-  position:fixed;right:30px;top:308px;z-index:55;background:#15171ce6;
+  position:fixed;right:30px;top:308px;z-index:55;background:#15171ce6;display:flex;align-items:center;justify-content:center;
   backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:6px;padding:3px 5px;
 }
 .visit-counter img{display:block;height:16px;}
@@ -185,4 +185,5 @@ body::after{width:520px;height:520px;background:#7b5cff2e;bottom:-140px;right:-1
   .taskbar-icons button{flex-shrink:0;}
   .track-info{display:none;}
   .start-btn{padding:0 8px;font-size:13px;}
+  .visit-counter{top:8px!important;right:8px!important;}
 }
