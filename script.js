@@ -58,13 +58,31 @@ function tick(){
 }
 tick(); setInterval(tick, 30000);
 
-// --- music player: soft R&B, autoplay with credits ---
+// --- music player: rotating library, autoplay with credits ---
 const tracks = [
   {src:'assets/music/tenderness.mp3', name:'Tenderness', credit:'Music: "Tenderness" by Bensound.com (royalty-free, credit required)'},
   {src:'assets/music/sweet.mp3', name:'Sweet', credit:'Music: "Sweet" by Bensound.com (royalty-free, credit required)'},
-  {src:'assets/music/funkorama.mp3', name:'Funkorama', credit:'Music: "Funkorama" by Kevin MacLeod (incompetech.com) — CC BY 3.0'}
+  {src:'assets/music/funkorama.mp3', name:'Funkorama', credit:'Music: "Funkorama" by Kevin MacLeod (incompetech.com) — CC BY 3.0'},
+  {src:'assets/music/lost-myself.mp3', name:'Lost Myself', credit:'Lalanne'},
+  {src:'assets/music/higher-water.mp3', name:'Higher Water', credit:'Blue Deer Studio'},
+  {src:'assets/music/gone-away.mp3', name:'Gone Away', credit:'Blue Beat Review'},
+  {src:'assets/music/bs_goinghigher.mp3', name:'Going Higher', credit:'Bensound.com'},
+  {src:'assets/music/bs_slowmotion.mp3', name:'Slow Motion', credit:'Bensound.com'},
+  {src:'assets/music/bs_onceagain.mp3', name:'Once Again', credit:'Bensound.com'},
+  {src:'assets/music/bs_acousticbreeze.mp3', name:'Acoustic Breeze', credit:'Bensound.com'},
+  {src:'assets/music/bs_jazzyfrenchy.mp3', name:'Jazzy Frenchy', credit:'Bensound.com'},
+  {src:'assets/music/bs_creativeminds.mp3', name:'Creative Minds', credit:'Bensound.com'},
+  {src:'assets/music/bs_funkyelement.mp3', name:'Funky Element', credit:'Bensound.com'},
+  {src:'assets/music/bs_happyrock.mp3', name:'Happy Rock', credit:'Bensound.com'},
+  {src:'assets/music/bs_retrosoul.mp3', name:'Retro Soul', credit:'Bensound.com'},
+  {src:'assets/music/bs_pianomoment.mp3', name:'Piano Moment', credit:'Bensound.com'},
+  {src:'assets/music/bs_ukulele.mp3', name:'Ukulele', credit:'Bensound.com'},
+  {src:'assets/music/bs_relaxing.mp3', name:'Relaxing', credit:'Bensound.com'},
+  {src:'assets/music/bs_energy.mp3', name:'Energy', credit:'Bensound.com'},
+  {src:'assets/music/bs_summer.mp3', name:'Summer', credit:'Bensound.com'},
+  {src:'assets/music/bs_cute.mp3', name:'Cute', credit:'Bensound.com'}
 ];
-let trackIndex = 0;
+let trackIndex = Math.floor(Math.random() * tracks.length);
 const audio = document.getElementById('audioPlayer');
 const playBtn = document.getElementById('playPause');
 const volBtn = document.getElementById('volBtn');
