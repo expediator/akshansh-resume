@@ -1,6 +1,6 @@
 # Akshansh Yadav — Resume (Windows-OS style)
 
-🔗 **Live:** https://expediator.github.io/akshansh-resume/
+🔗 **Live:** https://expediator.github.io/resume/
 
 An interactive resume styled as a Windows desktop — clickable, draggable popup
 windows with real `–  ▢  ✕` window controls, a taskbar with pinned apps and a
